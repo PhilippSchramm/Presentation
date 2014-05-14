@@ -62,7 +62,18 @@ __.l"-:_JL_;-";.__
             font-weight:bold;
             text-align:center;
     }
+    ul#ober {    list-style: disc;
+	        text-align: left;
+			margin: 0px;
+    }
+	ul#unter {    list-style: disc;
+	        text-align: left;
+			margin-left: 50px;
+    }
+
     </style>
+
+   
 </head>
 
 
@@ -95,20 +106,21 @@ __.l"-:_JL_;-";.__
     </div>
 
 <div id="Folie_2" class="step slide" data-x="-1500" data-y="1500" data-rotate-x="20">
-<p>    
-<ul style="list-style-type:disc">
+<p>   
+<ul id="ober">
 <li>Template-Engine f&uuml;r Java-Script</li><br>
 <li>Erweiterung von Mustache</li><br>
-<ul>
+<ul id="unter">
 <li>Logic-less Templates</li><br>
 <li>Keine if-Anweisungen, else-Klauseln oder Schleifen</li><br>
 </ul>
-<li>Trennung von Darstellung und Logik ? saubere Syntax</li><br>
+<li>Anweisungen & Schleifen sind durch Helper in Handlebars integriert</li><br>
 <li>License: MIT License</li><br>
 <li>Kann f&uuml;r HTML, Konfigurationsdateien und Quellcode verwendet werden</li><br>
 </ul>
 </p>
 </div>
+
 
 
     <div id="Folie_3" class="step" data-x="-1500" data-y="2500">
@@ -117,43 +129,66 @@ __.l"-:_JL_;-";.__
 
     <div id="Folie_4" class="step slide" data-x="-1500" data-y="3000" data-rotate-x="20">
 <p> <ul style="list-style-type:disc">
-        <li>Kann im Browser zum Generieren von statischen Seiten genutzt werden</li><br>
-<li>Kann mit Node.js ausgef&uuml;hrt werden</li><br>
-<li>Flexibles Nutzen der Templates</li><br>
-<li>Kann sogenannte &quot;Helper&quot; wie #each, #if, ... nutzen</li><br>
-<li>Flexible Referenzen auf Jason-Objekte</li><br>
+        <li>Kann im Browser zum Generieren von statischen und dynamischen Seiten genutzt werden</li><br>
+<li>Kann mit Node.js auf Serverseite kompiliert werden</li><br>
+<li>Durch die Nutzung von Templates können verschiedene Werte flexibel angenommen werden</li><br>
+<ul id="unter">
+	<li>Zum Beispiel Verweis auf JSON-Objekte</li><br>
+</ul>
 </ul></p>
     </div>
 
-    <div id="Folie_5" class="step slide" data-x="1500" data-y="1500">
+<div id="Folie_5.0" class="step slide" data-x="1500" data-y="1500">
         <p>
-<h2>TAGs</h2><br><br>
+<h2 style="font-size:230%">Einführungs-Beispiel</h2><br><br>
+<b style="font-size:120%">HTML</b><br>
+<pre>
+     &lt;html&gt;
+          &lt;body&gt;
+               <b>{{person}}</b>
+          &lt;/body&gt;
+     &lt;/html&gt;
+	 
+<b style="font-size:120%">JSON</b>
+     {
+          <b>person:</b> [
+               {firstName: "Philipp", lastName: "Schramm"},
+               {firstName: "Christoph", lastName: "Bey"},
+          ]
+     }
+</pre>
+</p>
+</div>
+	
+<div id="Folie_5.1" class="step slide" data-x="2500" data-y="1500">
+        <p>
+<h2 style="font-size:230%">Verwendung von TAGs</h2><br><br>
 <ul style="list-style-type:disc">
 <li>{{ Person }} referenziert auf den Schl&uuml;ssel &quot;Person&quot; im aktuellen Kontext</li><br>
 <li>Wenn der Schl&uuml;ssel nicht gefunden wird, wird rekursiv  im &uuml;bergeordneten Kontext gesucht</li><br>
-<li>Kann durch weitere geschweifte Klammer ausgeschlossen werden <b style="color:red">{</b>{{ Person }}<b style="color:red">}</b></li><br>
+<li>Durch eine dritte geschweifte Klammer wird <b style="color:red">{</b>{{ Person }}<b style="color:red">}</b> "HTML-escaped"</li><br>
 <li>Bei Fehlern, fehlenden Variablen oder nicht gefundenen Werten wird i.d.R. ein leerer String zur&uuml;ckgegeben</li><br>
 </ul>
 </p>
-    </div>
+</div>
 
     <div id="Folie_6" class="step slide" data-x="1500" data-y="3000">
         <h2>Aufbau</h2><br>
 <p><strong>Template:</strong><br>
 * {{ name }}<br>
 * {{ age }}<br>
-* {{ company }}<br><br>
+* {{{ company }}}<br><br>
 
-<strong>Hash:</strong><br>
+<strong>JSON:</strong><br>
 {<br>
   "name": "Christoph",<br>
-  "company": "<b>IBM</b>"<br>
+  "company": "&lt;b&gt;IBM&lt;/b&gt;"<br>
 }<br><br>
 
 <strong>Output:</strong><br>
 * Christoph<br>
 *<br>
-* <b>IBM</b><br>
+* IBM<br>
 </p>
     </div>
 
@@ -163,7 +198,7 @@ __.l"-:_JL_;-";.__
 
   <div id="Folie_8.1" class="step slide" data-x="-2000" data-y="4500">
         <p><pre>
-[...]        
+[...]       
    &lt;script type='text/javascript' src="jquery.js"&gt;&lt;/script&gt;
    &lt;script type='text/javascript' src="handlebars.js"&gt;&lt;/script&gt;
 [...]
@@ -174,12 +209,12 @@ __.l"-:_JL_;-";.__
 {{/university}}
         
 
-{{#each people}}
+{{<b>#each</b> people}}
    &lt;li&gt;&lt;span style="font-weight:bold"&gt;{{ this.name }} &lt;/span&gt;&lt;/li&gt;
       &lt;li&gt;Age: {{ this.age }} years&lt;/li&gt;
       &lt;li&gt;Hometown: {{ this.city }}&lt;/li&gt;
    &lt;/ul&gt;
-{{/each}}
+{{<b>/each</b>}}
 &lt;/script&gt;
 
 </div>
@@ -213,13 +248,13 @@ __.l"-:_JL_;-";.__
 <li>Kein Herumplagen mit JavaScript im View-Code</li><br>
 <li>Weiterer Schritt: Auslagerung sowohl von JavaScript-, sowie Handlebars-Code komplett in eine eigene .js-Datei</li><br>
 <li>Templates sind leicht zu erstellen, lesen und zu warten</li><br>
-<li>Template kann vorkompiliert werden (muss nicht im Browser kompiliert werden (wichtig f&uuml;r Mobile Ger&auml;te)</li>
+<li>Template muss nicht bei jeder erneuten Verwendung <b>neu</b> kompiliert werden (wichtig f&uuml;r Mobile Ger&auml;te)</li>
 </p>
     </div>
 
     <div id="Folie_12" class="step slide" data-x="2000" data-y="4500" data-rotate-x="20">
      <h2>Nachteile</h2><br><br>
-<p style="line-height:200%;"><li>Mehr Zeichen f&uuml;r eine Webseite</li><br>
+<p style="line-height:200%;"><li>Bei einfachen Webseiten zu komplexe Struktur (mehrere Script-Teile)</li><br>
 <li>Bei Einsatz mehrerer Templates kann das Laden einer Webseite verlangsamt werden</li><br>
 </p>
     </div>
@@ -275,6 +310,9 @@ if ("ontouchstart" in document.documentElement) {
 
 </body>
 </html>
+
+
+
 
 
 
