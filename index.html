@@ -214,7 +214,6 @@ __.l"-:_JL_;-";.__
    &lt;li&gt;&lt;span style="font-weight:bold"&gt;{{ this.name }} &lt;/span&gt;&lt;/li&gt;
       &lt;li&gt;Age: {{ this.age }} years&lt;/li&gt;
       &lt;li&gt;Hometown: {{ this.city }}&lt;/li&gt;
-   &lt;/ul&gt;
 {{<b>/each</b>}}
 &lt;/script&gt;
 
@@ -222,10 +221,13 @@ __.l"-:_JL_;-";.__
 <div id="Folie_8.2" class="step slide" data-x="-2000" data-y="5200">
         <p><pre>
 &lt;script type="text/javascript" charset="utf-8"&gt;
-    var data = { people: [
-     {name: "Philipp Schramm",age:"23",city:"Plankstadt"},
-     {name: "Christoph Bey",age:"23",city:"Olpe"}],
-     university:[{name:"DHBW",city:"Mannheim"}] };
+    var data = { 
+       people: [
+         {name: "Philipp Schramm",age:"23",city:"Plankstadt"},
+         {name: "Christoph Bey",age:"23",city:"Olpe"}],
+       university:[
+         {name:"DHBW",city:"Mannheim"}] 
+    };
       
    var source = $("#some-template").html();
    var template = Handlebars.compile(source);
