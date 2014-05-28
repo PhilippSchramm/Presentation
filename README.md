@@ -29,7 +29,7 @@ Handlebars wird im <HEAD>-Teil des HTML-Codes eingebunden. Ein ausführlicheres 
 
 #Allgemeines Handlebars Aufbau-Beispiel
 Die Sterne (*) im folgenden Beispiel dienen der Zeilen-Darstellung um die Leer-Zeile im Output zu verdeutlichen.
-
+```
 HTML-Template:
 * {{ name }}
 * {{ age }}
@@ -45,6 +45,7 @@ Output:
 * Christoph
 *
 * IBM
+```
 
 #Ein Beispiel, wie man es in der Praxis finden könnte:
 Aus Gründen der Übersichtlichkeit und des Platzes soll hier auf die Präsentation verwiesen werden, indem ein größeres Beispiel zu finden ist:
