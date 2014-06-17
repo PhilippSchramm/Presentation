@@ -1,16 +1,13 @@
-Presentation
-============
+Presentation handlebars.js
+==========================
 
-#Informationen
-Nähere Informationen über das Projekt, dessen Stärken und Konzepte können der Präsentation entnommen werden: http://philippschramm.github.io/Presentation
-Die Agenda der Präsentation besteht aus folgenden Teilen:
-* Was ist Handlebars.js?
-* Was kann Handlebars.js?
-* Einführungs-Beispiel
-* Verwendung von TAGs
-* Aufbau
-* Beispiel
-* Vor- und Nachteile
+#Agenda
+Die Agenda der Dokumentation besteht aus folgenden Teilen:
+*Voraussetzungen und Wissenswertes
+*
+*
+
+
  
 
 #Voraussetzungen und Wissenswertes
@@ -50,3 +47,14 @@ Output:
 #Ein Beispiel, wie man es in der Praxis finden könnte:
 Aus Gründen der Übersichtlichkeit und des Platzes soll hier auf die Präsentation verwiesen werden, indem ein größeres Beispiel zu finden ist:
 http://philippschramm.github.io/Presentation
+
+#Informationen zur Präsentation
+Nähere Informationen über das Projekt, dessen Stärken und Konzepte können der Präsentation entnommen werden: http://philippschramm.github.io/Presentation
+Die Agenda der Präsentation besteht aus folgenden Teilen:
+* Was ist Handlebars.js?
+* Was kann Handlebars.js?
+* Einführungs-Beispiel
+* Verwendung von TAGs
+* Aufbau
+* Beispiel
+* Vor- und Nachteile
