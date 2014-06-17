@@ -22,8 +22,7 @@ oder mit Node.js auf Serverseite kompiliert werden. Auch ein Verweis mit JSON-Ob
 
 
 ##Einbinden von Handlebars
-Handlebars wird im <HEAD>-Teil des HTML-Codes eingebunden. Ein ausführlicheres Beispiel befindet sich hier: https://github.com/PhilippSchramm/Presentation/blob/gh-pages/Demo.html.
-
+Handlebars wird im ```<HEAD>```-Teil des HTML-Codes eingebunden. 
 ```
 <script type='text/javascript' src="jquery-1.9.1.js"></script>
 <script type='text/javascript' src="handlebars-v1.3.0.js"></script>
