@@ -3,18 +3,21 @@ Presentation handlebars.js
 
 #Agenda
 Die Agenda der Dokumentation besteht aus folgenden Teilen:
-*Voraussetzungen und Wissenswertes
-*
-*
+* Vorgehensweise bei der Erstellung der Präsentation
+* Voraussetzungen und Wissenswertes
+* Einbinden von Handlebars
+* Allgemeines Handlebars Aufbau-Beispiel
+* Praxisbeispiel für Handebars 
+* Informationen zur Präsentation
 
-
+#Vorgehensweise bei der Erstellung der Präsentation
+Zunächst wurde eine Internet-Recherche betrieben. Die Internetseite http://handlebarsjs.com/ gab zunächst umfassende Anleitung, sowie weitere Informationen über das gegebene Framework. Die Verbindung zu Mustache konnte durch http://mustache.github.io/ evaluiert werden. Die praktischen Beispiele konnten auf der Webseite http://tryhandlebarsjs.com/ ausprobiert werden.
  
 
 #Voraussetzungen und Wissenswertes
 Handlebars benötigt die Einbindung des JQuery.js Frameworks und ist eine Erweiterung von Mustache. Des Weiteren dient Handlebars zur Nutzung von “Templates”. Diese sollen flexibel die jeweiligen Werte annehmen und können dank der sogenannten “Helper”, wie beispielsweise #each, #if, etc., auch Schleifen und Anweisungen darstellen.
 
-#Vorgehensweise bei der Erstellung der Präsentation
-Zunächst wurde eine Internet-Recherche betrieben. Die Internetseite http://handlebarsjs.com/ gab zunächst umfassende Anleitung, sowie weitere Informationen über das gegebene Framework. Die Verbindung zu Mustache konnte durch http://mustache.github.io/ evaluiert werden. Die praktischen Beispiele konnten auf der Webseite http://tryhandlebarsjs.com/ ausporbiert werden.
+
 
 #Einbinden von Handlebars
 Handlebars wird im <HEAD>-Teil des HTML-Codes eingebunden. Ein ausführlicheres Beispiel befindet sich hier: https://github.com/PhilippSchramm/Presentation/blob/gh-pages/Demo.html.
@@ -44,7 +47,7 @@ Output:
 * IBM
 ```
 
-#Ein Beispiel, wie man es in der Praxis finden könnte:
+#Praxisbeispiel für Handebars 
 Aus Gründen der Übersichtlichkeit und des Platzes soll hier auf die Präsentation verwiesen werden, indem ein größeres Beispiel zu finden ist:
 http://philippschramm.github.io/Presentation
 
