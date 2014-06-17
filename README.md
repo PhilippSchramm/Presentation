@@ -9,6 +9,7 @@ Die Agenda der Dokumentation besteht aus folgenden Teilen:
 * Verwendung von TAGs
 * Allgemeines Handlebars Aufbau-Beispiel
 * Praxisbeispiel für Handebars 
+* Vor- und Nachteile
 * Informationen zur Präsentation
 
 ##Vorgehensweise bei der Erstellung der Präsentation
@@ -119,6 +120,20 @@ Wird diese HTML-Datei im Browser angezeigt, sieht dies wie folgt aus:
 <TABLE BORDER=5>
 <img src="https://cloud.githubusercontent.com/assets/7722245/3298403/40199fc0-f601-11e3-9022-3484a5c25cc9.png" />
 </TABLE>
+
+##Vor- und Nachteile
+
+###Vorteile
+* View ist ausschließlich im Handlebars.js-Template - also in dem dafür vorgesehenen Script-Tag - untergebracht
+* Keine HTML-Tags im JavaScript-Code
+* Weiterer Schritt: Auslagerung sowohl von JavaScript-, sowie Handlebars-Code komplett in eine eigene .js-Datei
+* Templates sind leicht zu erstellen, lesen und zu warten
+* Template muss nicht bei jeder erneuten Verwendung neu kompiliert werden (wichtig für Mobile Geräte)
+
+###Nachteile
+* Bei einfachen Webseiten zu komplexe Struktur (mehrere Script-Teile)
+* Bei Einsatz mehrerer Templates kann das Laden einer Webseite verlangsamt werden
+
 
 ##Informationen zur Präsentation
 Nähere Informationen über das Projekt, dessen Stärken und Konzepte können der Präsentation entnommen werden: http://philippschramm.github.io/Presentation
