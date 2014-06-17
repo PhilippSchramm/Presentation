@@ -16,7 +16,7 @@ Die Agenda der Präsentation besteht aus folgenden Teilen:
 #Voraussetzungen und Wissenswertes
 Handlebars benötigt die Einbindung des JQuery.js Frameworks und ist eine Erweiterung von Mustache. Des Weiteren dient Handlebars zur Nutzung von “Templates”. Diese sollen flexibel die jeweiligen Werte annehmen und können dank der sogenannten “Helper”, wie beispielsweise #each, #if, etc., auch Schleifen und Anweisungen darstellen.
 
-#Vorgehensweise bei der Erstellung der Präsenation
+#Vorgehensweise bei der Erstellung der Präsentation
 Zunächst wurde eine Internet-Recherche betrieben. Die Internetseite http://handlebarsjs.com/ gab zunächst umfassende Anleitung, sowie weitere Informationen über das gegebene Framework. Die Verbindung zu Mustache konnte durch http://mustache.github.io/ evaluiert werden. Die praktischen Beispiele konnten auf der Webseite http://tryhandlebarsjs.com/ ausporbiert werden.
 
 #Einbinden von Handlebars
