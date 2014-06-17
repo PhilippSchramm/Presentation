@@ -109,61 +109,7 @@ Im Folgenden ist der Code eines ausführlicheren Beispiels zu sehen. Hier soll m
 
 Wird diese HTML-Datei im Browser angezeigt, sieht dies wie folgt aus:
 
-XXX
-<html>
-  <head>
-    <meta name="author" content="Christoph Bey und Philipp Schramm">
-    <title>Handlebars Demo</title>
-    <!--  -->
-    <!-- Integrate jQuery and Handlebars -->
-	<script type='text/javascript' src="jquery-1.9.1.js"></script>
-    <script type='text/javascript' src="handlebars-v1.3.0.js"></script>
-  </head>
-  <body>
-	<div id="contentgoeshere"></div>
-    
-	<!-- Beginning of Handlebar-Script -> Here you can place your content! -->
-    <script id="some-template" type="text/x-handlebars-template">
-   	 
-	 <!-- Heading with variable reference to Jason-Object -->
-	 {{#university}}
-   		 <h2>People from {{ this.name }} in {{ this.city }}</h2>
-   	 {{/university}}
-   	 
-   	 <ul>
-	 
-	 <!-- Using the "each"-block helper -->
-   	 {{#each people}}
-			
-			<!-- With "this." there's a reference to the properties of the current object (e.g.: name of people) -->
-   			 <li><span style="font-weight:bold">{{ this.name }} </span></li>
-   			 <ul>
-   				 <li>Age: {{ this.age }} years</li>
-   				 <li>Hometown: {{ this.city }}</li>
-   				 <li><a href="http://www.facebook.com/{{ this.facebook }}">Facebook</a></li>
-   			 </ul>
-   	 {{/each}}
-   	 </ul>
-	</script>
 
-	<!--  Beginning of Javascript! -->
-	<script type="text/javascript" charset="utf-8">
-  	
-	<!-- Jason-Object ! -->
-	var data = { people: [
-      {name: "Philipp Schramm",age:"23",city:"Plankstadt",facebook:"a"},
-      {name: "Christoph Bey",age:"23",city:"Olpe",facebook:"b"}],
-      university:[{name:"DHBW",city:"Mannheim"}] };
- 	 
-	 <!-- Compiling Handlebars -->
-      var source = $("#some-template").html();
-	  var template = Handlebars.compile(source);
-  	$("#contentgoeshere").html(template(data));
-	</script>
-    
-  </body>
-</html>
-XXX
 
 ##Informationen zur Präsentation
 Nähere Informationen über das Projekt, dessen Stärken und Konzepte können der Präsentation entnommen werden: http://philippschramm.github.io/Presentation
