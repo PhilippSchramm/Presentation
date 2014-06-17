@@ -118,7 +118,7 @@ Im Folgenden ist der Code eines ausführlicheren Beispiels zu sehen. Hier soll m
 
 Wird diese HTML-Datei im Browser angezeigt, sieht dies wie folgt aus:
 <TABLE BORDER=5>
-<img src="https://cloud.githubusercontent.com/assets/7722245/3298403/40199fc0-f601-11e3-9022-3484a5c25cc9.png" />
+<TR><TH><img src="https://cloud.githubusercontent.com/assets/7722245/3298403/40199fc0-f601-11e3-9022-3484a5c25cc9.png" />
 </TABLE>
 
 ##Vor- und Nachteile
