@@ -6,6 +6,7 @@ Die Agenda der Dokumentation besteht aus folgenden Teilen:
 * Vorgehensweise bei der Erstellung der Präsentation
 * Voraussetzungen und Wissenswertes
 * Einbinden von Handlebars
+* Verwendung von TAGs
 * Allgemeines Handlebars Aufbau-Beispiel
 * Praxisbeispiel für Handebars 
 * Informationen zur Präsentation
@@ -15,8 +16,9 @@ Zunächst wurde eine Internet-Recherche betrieben. Die Internetseite http://hand
  
 
 ##Voraussetzungen und Wissenswertes
-Handlebars benötigt die Einbindung des JQuery.js Frameworks und ist eine Erweiterung von Mustache. Des Weiteren dient Handlebars zur Nutzung von “Templates”. Diese sollen flexibel die jeweiligen Werte annehmen und können dank der sogenannten “Helper”, wie beispielsweise #each, #if, etc., auch Schleifen und Anweisungen darstellen.
-
+Handlebars benötigt die Einbindung des JQuery.js Frameworks und ist eine Erweiterung von Mustache. Des Weiteren dient Handlebars zur Nutzung von “Templates”, die flexibel die jeweiligen Werte annehmen und dank sogenannter “Helper”, wie beispielsweise #each, #if, etc., auch Schleifen oder Anweisungen darstellen. Außerdem kann Handlebars für HTML, Konfigurationsdateien und Quellcode verwendet werden. Handlebars steht unter der MIT-Lizenz und ist somit für Software, deren Quelltext frei einsehbar ist, als auch für Software, deren Quelltext nicht frei einsehbar ist, verwendbar. 
+Darüber hinaus kann Handlebars im Browser zum Generieren von statischen und dynamischen Seiten genutzt
+oder mit Node.js auf Serverseite kompiliert werden. Auch ein Verweis mit JSON-Objekten ist möglich.
 
 
 ##Einbinden von Handlebars
@@ -26,6 +28,13 @@ Handlebars wird im <HEAD>-Teil des HTML-Codes eingebunden. Ein ausführlicheres 
 <script type='text/javascript' src="jquery-1.9.1.js"></script>
 <script type='text/javascript' src="handlebars-v1.3.0.js"></script>
 ```
+
+##Verwendung von TAGs
+* {{ Person }} referenziert auf den Schlüssel "Person" im aktuellen Kontext
+* Wenn der Schlüssel nicht gefunden wird, wird rekursiv im übergeordneten Kontext gesucht
+* Durch eine dritte geschweifte Klammer wird {{{ Person }}} "HTML-escaped"
+* Bei Fehlern, fehlenden Variablen oder nicht gefundenen Werten wird i.d.R. ein leerer String zurückgegeben
+
 
 ##Allgemeines Handlebars Aufbau-Beispiel
 Die Sterne (*) im folgenden Beispiel dienen der Zeilen-Darstellung um die Leer-Zeile im Output zu verdeutlichen.
